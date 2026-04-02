@@ -2,7 +2,7 @@ name: Deploy web page to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # master 브랜치를 쓴다면 "master"로 변경
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -33,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # 빌드 폴더명. 안 되면 './build'로 수정해야 할 수 있습니다.
+          path: './dist'
 
   deploy:
     environment:
